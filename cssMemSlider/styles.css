@@ -99,7 +99,8 @@ h1 {
 #btn-1:checked ~ .lower-block .slider-controls label[for='btn-1'],
 #btn-2:checked ~ .lower-block .slider-controls label[for='btn-2'],
 #btn-3:checked ~ .lower-block .slider-controls label[for='btn-3'],
-#btn-4:checked ~ .lower-block .slider-controls label[for='btn-4'] {
+#btn-4:checked ~ .lower-block .slider-controls label[for='btn-4'],
+#btn-5:checked ~ .lower-block .slider-controls label[for='btn-5'] {
   background: transparent;
 }
 
@@ -119,6 +120,10 @@ h1 {
   transform: translate(-86.625rem);
 }
 
+#btn-5:checked ~ .slider-inner .slider-slides {
+  transform: translate(-115.5rem);
+}
+
 #btn-1:checked ~ .lower-block .description {
   transform: translate(0.5rem);
 }
@@ -133,6 +138,10 @@ h1 {
 
 #btn-4:checked ~ .lower-block .description {
   transform: translate(-41.2rem);
+}
+
+#btn-5:checked ~ .lower-block .description {
+  transform: translate(-56.3rem);
 }
 
 @media screen and (max-width: 768px) {
