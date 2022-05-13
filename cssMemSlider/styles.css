@@ -13,7 +13,7 @@ body {
 }
 
 section {
-  width: 28.875rem;
+  max-width: 28.875rem;
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 0.313rem #ccc;
 }
@@ -41,7 +41,7 @@ h1 {
 }
 
 .slider-slides {
-  width: 28.875rem;
+  max-width: 28.875rem;
   display: flex;
   align-items: center;
   transition: transform 0.8s ease;
@@ -57,7 +57,7 @@ h1 {
 
 .lower-block .text-wrapper {
   font-weight: bold;
-  width: 13rem;
+  width: 11rem;
   overflow: hidden;
   display: flex;
   white-space: nowrap;
@@ -94,6 +94,11 @@ h1 {
 .lower-block .slider-controls label:hover {
   border: 0.25rem solid rgb(220, 214, 253);
   background: rgb(220, 214, 253);
+}
+
+.lower-block .slider-controls label:active {
+  border: 0.25rem solid rgb(255, 127, 110);
+  background: rgb(255, 127, 110);
 }
 
 #btn-1:checked ~ .lower-block .slider-controls label[for='btn-1'],
@@ -144,12 +149,25 @@ h1 {
   transform: translate(-56.3rem);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   :root {
-    font-size: 10.39px;
+    font-size: calc(100vw / 31.25);
   }
 
   img {
-    width: 300px;
+    width: calc(100vw / 1.082251);
+  }
+
+  .lower-block {
+    flex-direction: column;
+  }
+
+  .lower-block .text-wrapper {
+    order: 2;
+    align-self: start;
+  }
+
+  .lower-block .slider-controls {
+    margin-top: 10px;
   }
 } ;
